@@ -105,6 +105,21 @@ python prompt_length_analyze.py
 - ReClor: 5,138 (3.11%)
 - ARC: 3,244 (1.96%)
 - BalaCOPA: 999 (0.61%)
+  
+| 数据集 | 样本数量 | 占比 |
+|--------|----------|------|
+| race | 87,848 | 53.27% |
+| winogrande | 40,394 | 24.50% |
+| logiqa | 13,024 | 7.90% |
+| boolean_train | 9,427 | 5.72% |
+| reclor_train | 4,638 | 2.81% |
+| boolean_dev | 3,270 | 1.98% |
+| arc_easy | 2,149 | 1.30% |
+| logiqa_val | 1,558 | 0.94% |
+| arc_challenge | 1,095 | 0.66% |
+| balacopa | 999 | 0.61% |
+| reclor_val | 500 | 0.30% |
+| **总计** | 164,902 | 100% |
 
 ## 注意事项
 
@@ -128,43 +143,3 @@ python prompt_length_analyze.py
 
 MIT License
 
-
-这个 README.md 文件提供了项目的完整概述，包括功能特性、支持的数据集、处理流程、使用方法等关键信息。基于代码分析，特别是：
-
-
-```528:540:dataset/dataset_convert.py
-    converters = [
-        (RaceConverter, "converting/race.parquet", "race"),
-        (ArcConverter, "converting/ARC-Challenge.parquet", "arc_challenge"),
-        (ArcConverter, "converting/ARC-Easy.parquet", "arc_easy"),
-        (LogiQAConverter, "converting/LogiQA2.0.txt", "logiqa"),
-        (LogiQAConverter, "converting/LogiQA2.0-test.txt", "logiqa_val"),
-        (ReclorConverter, "converting/reclor-train.json", "reclor_train"),
-        (ReclorConverter, "converting/reclor-val.json", "reclor_val"),
-        (WinograndeConverter, "converting/winogrande.jsonl", "winogrande"),
-        (BalacopaConverter, "converting/balacopa.xml", "balacopa"),
-        (BooleanQuestionsConverter, "converting/boolean-questions-train.jsonl", "boolean_train"),
-        (BooleanQuestionsConverter, "converting/boolean-questions-dev.jsonl", "boolean_dev")
-    ]
-```
-
-
-用于确认支持的数据集列表，以及：
-
-
-```5:18:dataset/analysis/merged/dataset_composition.md
-| 数据集 | 样本数量 | 占比 |
-|--------|----------|------|
-| race | 87,848 | 53.27% |
-| winogrande | 40,394 | 24.50% |
-| logiqa | 13,024 | 7.90% |
-| boolean_train | 9,427 | 5.72% |
-| reclor_train | 4,638 | 2.81% |
-| boolean_dev | 3,270 | 1.98% |
-| arc_easy | 2,149 | 1.30% |
-| logiqa_val | 1,558 | 0.94% |
-| arc_challenge | 1,095 | 0.66% |
-| balacopa | 999 | 0.61% |
-| reclor_val | 500 | 0.30% |
-| **总计** | 164,902 | 100% |
-```
