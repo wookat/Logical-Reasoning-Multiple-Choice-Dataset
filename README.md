@@ -68,7 +68,7 @@ dataset/
     "text": "上下文文本",
     "question": "问题描述",
     "options": ["选项A", "选项B", "选项C", "选项D"],
-    "label": 0,  // 正确答案的索引
+    "label": 0,  //正确答案的索引
     "source": "数据集来源"
 }
 ```
@@ -127,7 +127,7 @@ python prompt_length_analyze.py
 ## 许可证
 
 MIT License
-```
+
 
 这个 README.md 文件提供了项目的完整概述，包括功能特性、支持的数据集、处理流程、使用方法等关键信息。基于代码分析，特别是：
 
